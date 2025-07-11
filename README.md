@@ -12,12 +12,6 @@ A modern property listing and management web application built with Next.js and 
 - Responsive sidebar and navigation
 - Beautiful UI with Tailwind CSS
 
-## App Preview
-
-<div align="center">
-  <img src="public/review/app-main.png" alt="App Main Screenshot" style="max-width: 700px; border-radius: 12px; box-shadow: 0 2px 8px #0002; margin-bottom: 24px;" />
-</div>
-
 ## Screenshots
 
 Below are some screenshots of the app (see `/public/review/`):
