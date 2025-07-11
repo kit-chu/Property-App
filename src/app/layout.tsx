@@ -1,15 +1,16 @@
+// app/layout.tsx หรือ root layout ที่ใช้ใน Next.js App Router
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Prompt } from "next/font/google";
 import "./globals.css";
+import { ComponentsNavbar } from "@/app/components/ComponentsNavbar";
+import { ComponentsFooter } from "@/app/components/ComponentsFooter";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// ✅ ใช้ฟอนต์ Prompt ที่รองรับภาษาไทย
+const prompt = Prompt({
+  weight: ["400", "700"],
+  subsets: ["latin", "thai"],
+  variable: "--font-prompt",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="th" data-theme="emerald">
+      <body className={`${prompt.variable} font-sans antialiased`}>
+        <ComponentsNavbar />
         {children}
+        <ComponentsFooter />
       </body>
     </html>
   );
